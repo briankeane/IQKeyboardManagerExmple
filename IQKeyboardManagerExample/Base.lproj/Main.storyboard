@@ -1,25 +1,137 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+            <string>Roboto-Bold</string>
+            <string>Roboto-Bold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IQKeyboardManagerExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ho-Ko-Ksc">
+                                <rect key="frame" x="-10" y="374" width="394" height="47"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Lca-rA-TDZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qlo-KE-Ln6">
+                                <rect key="frame" x="-10" y="429" width="394" height="47"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="XHX-pP-2aU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Login-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Jrt-2Q-XkB">
+                                <rect key="frame" x="100" y="125" width="175" height="206"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="206" id="DRT-TJ-vcW"/>
+                                    <constraint firstAttribute="width" secondItem="Jrt-2Q-XkB" secondAttribute="height" multiplier="175:206" id="bup-XP-UOA"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="w4V-Kw-Nbz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qlo-KE-Ln6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-30" id="3PS-GM-sDB"/>
+                            <constraint firstItem="Jrt-2Q-XkB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="D57-PA-TOV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jrt-2Q-XkB" secondAttribute="trailing" constant="80" id="DkM-aU-nLL"/>
+                            <constraint firstItem="Jrt-2Q-XkB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="105" id="F6M-gC-rip"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Ho-Ko-Ksc" secondAttribute="trailing" constant="-29" id="WqF-Su-rJu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qlo-KE-Ln6" secondAttribute="trailing" constant="-29" id="Z9C-Xx-a33"/>
+                            <constraint firstItem="Qlo-KE-Ln6" firstAttribute="top" secondItem="6Ho-Ko-Ksc" secondAttribute="bottom" constant="8" id="aSb-y5-z50"/>
+                            <constraint firstItem="6Ho-Ko-Ksc" firstAttribute="top" secondItem="Jrt-2Q-XkB" secondAttribute="bottom" constant="43" id="cKZ-LU-mjw"/>
+                            <constraint firstItem="6Ho-Ko-Ksc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-30" id="fKN-Ug-IHj"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="62.5" y="359.5"/>
+        </scene>
+        <!--Sign In-->
+        <scene sceneID="X8V-Jx-zu4">
+            <objects>
+                <viewController storyboardIdentifier="EmailLoginViewController" id="uqY-ZT-0hK" customClass="EmailLoginViewController" customModule="IQKeyboardManagerExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rc0-fa-zgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="rKc-Ph-tJf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m0C-kA-Rum">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Sign In" id="6KV-2b-zkl">
+                        <barButtonItem key="leftBarButtonItem" image="barButtonItemBackImage.png" id="qFd-gA-s6G">
+                            <inset key="imageInsets" minX="6" minY="8" maxX="2" maxY="8"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="uqY-ZT-0hK" id="Sgb-oV-S1d"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="mqb-h3-evU">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U6Y-EP-2eQ">
+                                <rect key="frame" x="312" y="6" width="47" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.36470588240000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Ff2-aN-CYb"/>
+                                    <constraint firstAttribute="width" constant="47" id="GSU-p6-7hQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="14"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ff2-aN-CYb"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="loginBarButtonPressed:" destination="uqY-ZT-0hK" eventType="touchUpInside" id="FfU-zq-u9N"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahx-AT-f9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266.5" y="-1599.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Login-Logo" width="145" height="172"/>
+        <image name="barButtonItemBackImage.png" width="145" height="172"/>
+    </resources>
 </document>
